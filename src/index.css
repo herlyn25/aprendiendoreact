@@ -1,4 +1,6 @@
 body {
- padding: 20px;
+ padding: 2rem;
 }
-
+button {
+    margin-left: 1rem;
+}
