@@ -1,9 +1,10 @@
-import CustomHookCounter from "./components/CustomHookCounter"
+import CustomHookUseFetch from "./components/CustomHookUseFetch"
+
 
 const App = () => {
   return (
     <div>
-      <CustomHookCounter />
+      <CustomHookUseFetch />
     </div>
   )
 }
