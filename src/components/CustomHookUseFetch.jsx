@@ -1,12 +1,10 @@
-import { useState } from "react"
-import useFetch from "../hooks/useFetch"
-import { useCounter } from "../hooks/useCounter"
+import { useFetch, useCounter } from "../hooks/"
 
 const CustomHookUseFetch = () => {
   const {counter, incrementar } = useCounter()
   const url = `https://rickandmortyapi.com/api/character/${counter}`  
   const {valorInicial} = useFetch(url)
-  const {name, image, cargando}=(valorInicial)
+  const {name, image, cargando}=valorInicial
   return (
     <div>
         {
@@ -17,7 +15,6 @@ const CustomHookUseFetch = () => {
             </div>
         }
         <button onClick={()=>incrementar()} type="button" className="btn btn-primary">Next</button>
-
     </div>
   )
 }

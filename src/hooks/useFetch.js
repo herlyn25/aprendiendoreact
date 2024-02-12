@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react"
 
-
-const useFetch = (url) => {  
-    
+export const useFetch = (url) => {      
     const [valorInicial,setValorInicial] = useState({
         name : '',
         image: '',
@@ -10,19 +8,21 @@ const useFetch = (url) => {
     })
       
     const getFetch = async () => {
+      
         const resp = await fetch(url);
         const data = await resp.json()
         const {name,image}= data
-        setValorInicial({name, image})
+        
+        setValorInicial({name, image, cargando:false})
      }
 
     useEffect (()=>{
-        getFetch(url);
+        setTimeout(()=>{
+            getFetch(url);
+        }, 1000)        
     },[url])
 
   return {
        valorInicial
     }  
 }
-
-export default useFetch
