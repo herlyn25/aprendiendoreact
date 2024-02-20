@@ -1,11 +1,8 @@
-import CustomHookUseFetch from "./components/CustomHookUseFetch"
-
+import {CallBackHook} from "./hooks/CallBackHook"
 
 const App = () => {
-  return (
-    <div>
-      <CustomHookUseFetch />
-    </div>
+  return (   
+      <CallBackHook />   
   )
 }
 
